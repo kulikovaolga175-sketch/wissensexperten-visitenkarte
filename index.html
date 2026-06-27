@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Olga Kulikova — Wissensexperten Bildungsinstitut</title>
+<meta name="description" content="Olga Kulikova — Russischsprachige Bereichsleitung, Wissensexperten Bildungsinstitut. Nachhilfe, Deutsch als Fremdsprache, Sprachkurse — deutschlandweit, online & vor Ort.">
+
+<!-- Превью при отправке ссылки (WhatsApp / Telegram / Facebook) -->
+<meta property="og:type" content="website">
+<meta property="og:title" content="Olga Kulikova — Wissensexperten Bildungsinstitut">
+<meta property="og:description" content="Russischsprachige Bereichsleitung · Nachhilfe & Deutsch als Fremdsprache — deutschlandweit, online & vor Ort.">
+<meta property="og:image" content="olga.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Olga Kulikova — Wissensexperten Bildungsinstitut">
+<meta name="twitter:description" content="Russischsprachige Bereichsleitung · Nachhilfe & Deutsch als Fremdsprache.">
+<meta name="twitter:image" content="olga.jpg">
+<style>
+  :root{
+    --green:#93c83c;        /* фирменный салатовый (как в логотипе) */
+    --green-dark:#6b9e1f;
+    --green-deep:#3f6b14;
+    --green-light:#f2f8e6;
+    --logo-gray:#808184;
+    --orange:#ec5b20;        /* имя / акцент */
+    --teal:#159b96;          /* блок «Unternehmen» */
+    --teal-light:#e6f5f4;
+    --text:#2b3a2a;
+    --muted:#69756a;
+    --white:#ffffff;
+    --border:#e4ece0;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{
+    font-family:"Segoe UI",system-ui,-apple-system,Roboto,Helvetica,Arial,sans-serif;
+    background:linear-gradient(160deg,#f3f9eb 0%,#e9f4dc 100%);
+    color:var(--text);
+    min-height:100vh;
+    display:flex;align-items:center;justify-content:center;
+    padding:24px;
+  }
+
+  .card{
+    width:100%;max-width:460px;
+    background:var(--white);
+    border:1px solid var(--border);
+    border-radius:24px;
+    overflow:hidden;
+    box-shadow:0 24px 60px rgba(90,143,30,.18);
+    animation:rise .7s cubic-bezier(.2,.8,.2,1) both;
+  }
+  @keyframes rise{from{opacity:0;transform:translateY(24px)}to{opacity:1;transform:none}}
+
+  /* ЛОГОТИП-ПОЛОСА (белый фон) */
+  .logobar{
+    background:#fff;
+    padding:20px 24px 16px;
+    text-align:center;
+  }
+  .logobar img{max-width:200px;height:auto;display:inline-block}
+  /* запасной CSS-логотип, если logo.png нет */
+  .logo-css{
+    display:inline-flex;align-items:center;gap:10px;line-height:.9;
+  }
+  .logo-css .crescent{width:30px;height:48px;flex:none;color:var(--green)}
+  .logo-css .txt{text-align:left}
+  .logo-css .txt b{display:block;font-size:30px;font-weight:800;color:var(--green);letter-spacing:-.5px}
+  .logo-css .txt span{display:block;font-size:28px;font-weight:400;color:var(--logo-gray);letter-spacing:.5px;margin-top:-2px}
+
+  /* ШАПКА */
+  .head{
+    background:linear-gradient(135deg,var(--green) 0%,var(--green-dark) 100%);
+    color:#fff;text-align:center;
+    padding:34px 30px 28px;
+    position:relative;
+  }
+  .head::after{
+    content:"";position:absolute;left:0;right:0;bottom:0;height:5px;
+    background:linear-gradient(90deg,var(--orange),#ffb27a,var(--orange));
+  }
+  /* логотип-текст */
+  .logo{
+    display:flex;align-items:center;justify-content:center;gap:8px;
+    margin-bottom:18px;
+  }
+  .logo .leaf{
+    width:26px;height:26px;flex:none;
+    color:#eaffce;
+  }
+  .logo b{font-size:15px;font-weight:800;letter-spacing:.5px;line-height:1}
+  .logo b span{font-weight:400;opacity:.92}
+
+  .avatar{
+    width:122px;height:122px;border-radius:50%;
+    object-fit:cover;display:block;margin:0 auto 14px;
+    border:4px solid #fff;
+    box-shadow:0 10px 26px rgba(0,0,0,.25);
+    background:#fff;
+  }
+  h1{font-size:28px;font-weight:800;color:#fff;letter-spacing:.3px}
+  .role{
+    margin-top:6px;font-size:14px;font-weight:700;
+    color:#fff;
+    background:var(--orange);
+    display:inline-block;
+    padding:4px 14px;border-radius:999px;
+    box-shadow:0 6px 16px rgba(236,91,32,.4);
+  }
+  .inst{margin-top:10px;font-size:13px;color:#eaffce;font-weight:600}
+
+  /* ТЕЛО */
+  .body{padding:26px 28px 30px}
+
+  .strap{
+    text-align:center;font-size:12px;letter-spacing:2px;text-transform:uppercase;
+    font-weight:700;color:var(--orange);margin-bottom:20px;
+  }
+
+  /* услуги: два блока */
+  .services{display:grid;gap:14px;margin-bottom:24px}
+  .svc{
+    border:1px solid var(--border);border-radius:16px;overflow:hidden;
+    transition:.25s;
+  }
+  .svc:hover{transform:translateY(-3px);box-shadow:0 12px 24px rgba(0,0,0,.08)}
+  .svc-h{
+    padding:11px 16px;font-size:14px;font-weight:800;color:#fff;
+    display:flex;align-items:center;gap:8px;
+  }
+  .svc.priv .svc-h{background:linear-gradient(135deg,var(--green),var(--green-dark))}
+  .svc.firm .svc-h{background:linear-gradient(135deg,var(--teal),#0e807b)}
+  .svc ul{list-style:none;padding:12px 16px 14px}
+  .svc li{
+    font-size:13px;color:var(--text);line-height:1.45;
+    padding:5px 0 5px 20px;position:relative;
+  }
+  .svc li::before{
+    content:"";position:absolute;left:0;top:10px;
+    width:8px;height:8px;border-radius:2px;transform:rotate(45deg);
+  }
+  .svc.priv li::before{background:var(--green)}
+  .svc.firm li::before{background:var(--teal)}
+  .svc li b{display:block;font-weight:700}
+  .svc li small{color:var(--muted);font-size:12px}
+
+  /* уровни */
+  .label{
+    font-size:11px;letter-spacing:1.5px;text-transform:uppercase;
+    color:var(--muted);font-weight:700;margin-bottom:10px;text-align:center;
+  }
+  .levels{display:flex;flex-wrap:wrap;gap:7px;justify-content:center;margin-bottom:24px}
+  .levels span{
+    font-size:12px;font-weight:700;padding:5px 12px;border-radius:999px;
+    border:1px solid var(--border);color:var(--green-dark);background:var(--white);
+    transition:.25s;
+  }
+  .levels span:hover{color:#fff;background:var(--green-dark);border-color:var(--green-dark);transform:translateY(-2px)}
+
+  /* соцсети */
+  .socials{display:flex;justify-content:center;gap:13px;margin-bottom:22px}
+  .socials a{
+    width:48px;height:48px;display:flex;align-items:center;justify-content:center;
+    border-radius:12px;background:var(--green-light);border:1px solid var(--border);
+    color:var(--green-dark);
+    transition:transform .25s ease,background .25s ease,color .25s ease,box-shadow .25s ease;
+  }
+  .socials a svg{width:23px;height:23px}
+  .socials a:hover{
+    transform:translateY(-5px) scale(1.06);color:#fff;
+    background:var(--green-dark);box-shadow:0 12px 22px rgba(90,143,30,.35);
+  }
+
+  /* кнопка */
+  .cta{
+    display:flex;align-items:center;justify-content:center;gap:10px;width:100%;
+    padding:16px 24px;border-radius:14px;font-size:16px;font-weight:800;
+    color:#fff;text-decoration:none;
+    background:linear-gradient(135deg,var(--orange),#ff7d44);
+    box-shadow:0 12px 28px rgba(236,91,32,.4);
+    transition:transform .2s ease,box-shadow .2s ease,filter .2s ease;
+  }
+  .cta:hover{transform:translateY(-3px);filter:brightness(1.05);box-shadow:0 16px 34px rgba(236,91,32,.5)}
+  .cta:active{transform:translateY(0)}
+  .cta svg{width:20px;height:20px}
+
+  .contact{margin-top:20px;text-align:center;font-size:13px;color:var(--muted);line-height:1.8}
+  .contact a{color:var(--green-dark);text-decoration:none;font-weight:700}
+  .contact a:hover{text-decoration:underline}
+
+  .footer{margin-top:16px;text-align:center;font-size:11px;color:#9fb094}
+
+  @media(max-width:440px){
+    .head{padding:28px 20px 24px}
+    .body{padding:22px 20px 26px}
+    h1{font-size:24px}
+    .avatar{width:104px;height:104px}
+  }
+</style>
+</head>
+<body>
+  <main class="card">
+
+    <div class="logobar">
+      <img src="logo.jpg" alt="Wissensexperten" onerror="this.style.display='none';document.getElementById('logoFallback').style.display='inline-flex'">
+      <div class="logo-css" id="logoFallback" style="display:none">
+        <svg class="crescent" viewBox="0 0 30 48" fill="currentColor"><path d="M30 0C12 4 0 16 0 30c0 8 5 15 14 18-7-5-11-12-11-20C3 16 14 5 30 0z"/></svg>
+        <span class="txt"><b>wissens</b><span>experten</span></span>
+      </div>
+    </div>
+
+    <header class="head">
+      <img class="avatar" src="olga.jpg" alt="Olga Kulikova" onerror="this.style.display='none'">
+      <h1>Olga Kulikova</h1>
+      <span class="role">Russischsprachige Bereichsleitung</span>
+      <p class="inst">Wissensexperten Bildungsinstitut</p>
+    </header>
+
+    <div class="body">
+      <p class="strap">Deutschlandweit · Online &amp; vor Ort</p>
+
+      <div class="services">
+        <div class="svc priv">
+          <div class="svc-h">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+            Privatkunden
+          </div>
+          <ul>
+            <li><b>Einzelnachhilfe</b><small>Online &amp; zu Hause · alle Fächer/Klassen</small></li>
+            <li><b>Deutsch als Fremdsprache</b><small>Sprachniveaus A1–C1</small></li>
+            <li><b>Mini-Gruppen DaF</b><small>individuelle Förderung</small></li>
+          </ul>
+        </div>
+
+        <div class="svc firm">
+          <div class="svc-h">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="7" width="18" height="13" rx="2"/><path d="M8 7V5a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"/></svg>
+            Unternehmen
+          </div>
+          <ul>
+            <li><b>Business English</b><small>Fachsprache &amp; Kommunikation</small></li>
+            <li><b>Deutsch als Fremdsprache</b><small>A1–C1 &amp; Training</small></li>
+            <li><b>Azubi-Support</b><small>Nachhilfe für Auszubildende</small></li>
+            <li><b>Flexible Trainings</b><small>Inhouse oder Online</small></li>
+          </ul>
+        </div>
+      </div>
+
+      <p class="label">Sprachniveaus</p>
+      <div class="levels">
+        <span>A1</span><span>A2</span><span>B1</span>
+        <span>B2</span><span>C1</span><span>Prüfungsvorbereitung</span>
+      </div>
+
+      <div class="socials">
+        <a href="https://t.me/Wissensexperten175" target="_blank" rel="noopener" title="Telegram" aria-label="Telegram">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M9.78 18.65l.28-4.23 7.68-6.92c.34-.31-.07-.46-.52-.19L7.74 13.3 3.64 12c-.88-.25-.89-.86.2-1.3l15.97-6.16c.73-.33 1.43.18 1.15 1.3l-2.72 12.81c-.19.91-.74 1.13-1.5.71l-4.14-3.05-1.99 1.93c-.23.23-.42.42-.83.42z"/></svg>
+        </a>
+        <a href="https://wa.me/491632314843" target="_blank" rel="noopener" title="WhatsApp" aria-label="WhatsApp">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M.057 24l1.687-6.163a11.867 11.867 0 01-1.587-5.946C.16 5.335 5.495 0 12.05 0a11.82 11.82 0 018.413 3.488 11.82 11.82 0 013.48 8.414c-.003 6.557-5.338 11.892-11.893 11.892a11.9 11.9 0 01-5.688-1.448L.057 24zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884a9.82 9.82 0 001.518 5.248l-.999 3.648 3.97-1.042zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg>
+        </a>
+        <a href="https://instagram.com/wissens_experten" target="_blank" rel="noopener" title="Instagram" aria-label="Instagram">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><line x1="17.5" y1="6.5" x2="17.5" y2="6.5"/></svg>
+        </a>
+        <a href="https://wissensexperten.com" target="_blank" rel="noopener" title="Website" aria-label="Website">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M2 12h20"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+        </a>
+        <a href="mailto:kulikovaolga175@gmail.com" title="E-Mail" aria-label="E-Mail">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 6L2 7"/></svg>
+        </a>
+      </div>
+
+      <a class="cta" href="https://wa.me/491632314843" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+        Beratung anfragen
+      </a>
+
+      <p class="contact">
+        📍 Franz-Haniel-Straße 83, 47443 Moers<br>
+        📞 <a href="tel:+491632314843">+49 163 2314843</a><br>
+        🌐 <a href="https://wissensexperten.com" target="_blank" rel="noopener">wissensexperten.com</a><br>
+        ✉️ <a href="mailto:kulikovaolga175@gmail.com">kulikovaolga175@gmail.com</a>
+      </p>
+
+      <p class="footer">© Wissensexperten Bildungsinstitut · Olga Kulikova</p>
+    </div>
+
+  </main>
+</body>
+</html>
